@@ -1,0 +1,5 @@
+h_power<-data.table(fread(input="household_power_consumption.txt",sep=";",header=TRUE))
+h_power$Global_active_power=as.numeric(h_power$Global_active_power)
+png(file="plot1.png")
+hist(h_power$Global_active_power,col="blue",main="Global Active Power",xlab="global active power(kilowatts)")
+dev.off()
