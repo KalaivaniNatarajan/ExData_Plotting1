@@ -9,9 +9,10 @@ finalpower$Sub_metering_1<-as.numeric(finalpower$Sub_metering_1)
 finalpower$Sub_metering_2<-as.numeric(finalpower$Sub_metering_2)
 finalpower$Sub_metering_3<-as.numeric(finalpower$Sub_metering_3)
 finalpower$Voltage<-as.numeric(finalpower$Voltage)
-finalpower$Global_reactive_power<-as.numeric(finalpower$Global_reactive_power)png(file="plot4.png")
+finalpower$Global_reactive_power<-as.numeric(finalpower$Global_reactive_power)
 
 ##plotting code
+png(file="plot4.png")
 par(mfrow=c(2,2))
 plot(finalpower$Time,finalpower$Global_active_power,type="l",xlab="time",ylab="global active power")
 plot(finalpower$Time,finalpower$Voltage,type="l",xlab="datetime",ylab="voltage")
