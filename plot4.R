@@ -12,7 +12,7 @@ finalpower$Voltage<-as.numeric(finalpower$Voltage)
 finalpower$Global_reactive_power<-as.numeric(finalpower$Global_reactive_power)
 
 ##plotting code
-png(file="plot4.png")
+png(file="plot4.png",width=480,height=480)
 par(mfrow=c(2,2))
 plot(finalpower$Time,finalpower$Global_active_power,type="l",xlab="time",ylab="global active power")
 plot(finalpower$Time,finalpower$Voltage,type="l",xlab="datetime",ylab="voltage")

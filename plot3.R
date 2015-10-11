@@ -10,7 +10,7 @@ finalpower$Sub_metering_3<-as.numeric(finalpower$Sub_metering_3)
 
 ##plotting code
 
-png(file="plot3.png")
+png(file="plot3.png",width=480,height=480)
 plot(finalpower$Time,finalpower$Sub_metering_1,type="n",xlab="Time",ylab="Energy sub metering",main="Time vs Energy Sub-metering")
 lines(finalpower$Time,finalpower$Sub_metering_1,col="blue")
 lines(finalpower$Time,finalpower$Sub_metering_2,col="red")

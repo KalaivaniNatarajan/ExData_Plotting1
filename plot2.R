@@ -7,6 +7,6 @@ finalpower$Time<-strptime(paste(finalpower$Date,finalpower$Time,sep=" "),format=
 finalpower$Date<-as.Date(finalpower$Date,format="%d/%m/%Y")
 
 ##plotting code
-png(file="plot2.png")
+png(file="plot2.png",width=480,height=480)
 plot(finalpower$Time,finalpower$Global_active_power,type="l",main="Line graph",xlab="Time",ylab="Golbal_active_power(kilowatts)")
 dev.off()
