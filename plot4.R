@@ -1,3 +1,4 @@
+
 hpower<-data.frame(read.csv(file="household_power_consumption.txt",sep=";",header=TRUE,stringsAsFactors = FALSE))
 finalpower<-subset(hpower,(hpower$Date=="1/2/2007" | hpower$Date=="2/2/2007"))
 
@@ -10,13 +11,12 @@ finalpower$Sub_metering_2<-as.numeric(finalpower$Sub_metering_2)
 finalpower$Sub_metering_3<-as.numeric(finalpower$Sub_metering_3)
 finalpower$Voltage<-as.numeric(finalpower$Voltage)
 finalpower$Global_reactive_power<-as.numeric(finalpower$Global_reactive_power)
-
 ##plotting code
 png(file="plot4.png",width=480,height=480)
 par(mfrow=c(2,2))
-plot(finalpower$Time,finalpower$Global_active_power,type="l",xlab="time",ylab="global active power")
+plot(finalpower$Time,finalpower$Global_active_power,type="l",xlab="datetime",ylab="global active power")
 plot(finalpower$Time,finalpower$Voltage,type="l",xlab="datetime",ylab="voltage")
- plot(finalpower$Time,finalpower$Sub_metering_1,type="n",xlab="Time",ylab="Energy sub metering")
+ plot(finalpower$Time,finalpower$Sub_metering_1,type="n",xlab="dateTime",ylab="Energy sub metering")
 lines(finalpower$Time,finalpower$Sub_metering_1,col="blue")
 lines(finalpower$Time,finalpower$Sub_metering_2,col="red")
 lines(finalpower$Time,finalpower$Sub_metering_3,col="green")
