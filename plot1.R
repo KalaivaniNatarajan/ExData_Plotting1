@@ -1,5 +1,6 @@
 hpower<-data.frame(read.csv(file="household_power_consumption.txt",sep=";",header=TRUE,stringsAsFactors = FALSE))
 finalpower<-subset(hpower,(hpower$Date=="1/2/2007" | hpower$Date=="2/2/2007"))
+finalpower$Global_active_power<-as.numeric(finalpower$Global_active_power)
 png(file="Plot1.png")
 hist(finalpower$Global_active_power,col="blue",main="Global Active Power",xlab="global active power(kilowatts)")
 dev.off()
